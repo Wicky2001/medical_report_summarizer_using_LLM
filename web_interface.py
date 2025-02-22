@@ -15,7 +15,7 @@ def main():
 
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-    uploaded_file = st.file_uploader("Upload a file", type=["pdf", "txt", "csv", "png", "jpg"])
+    uploaded_file = st.file_uploader("Upload your medical report", type=["pdf"])
 
     if uploaded_file is not None:
         
@@ -25,6 +25,18 @@ def main():
             f.write(uploaded_file.getbuffer())
 
         st.success(f"File successfully saved to: {file_path}")
+
+        # Create output file location to save pdfs wich converted to searchable
+        file_name = os.path.splitext(os.path.basename(file_path))[0]
+        output_filename_for_flatten = file_path = os.path.join(UPLOAD_FOLDER, f"{file_name}_searchable.pdf")
+
+        if st.button("Get summary"):
+            with st.spinner("Processing.."):
+                if is_pdf_flattened(file_path):
+                    convert_flatten_to_searchable(pdf_file_path=file_path,output_pdf_path=output_filename_for_flatten)
+                    file_path = output_filename_for_flatten
+
+                summary = get_summerized_response(file_path)
 
 
 
