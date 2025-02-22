@@ -28,7 +28,7 @@ def main():
 
         # Create output file location to save pdfs wich converted to searchable
         file_name = os.path.splitext(os.path.basename(file_path))[0]
-        output_filename_for_flatten = file_path = os.path.join(UPLOAD_FOLDER, f"{file_name}_searchable.pdf")
+        output_filename_for_flatten = os.path.join(UPLOAD_FOLDER, f"{file_name}_searchable.pdf")
 
         if st.button("Get summary"):
             with st.spinner("Processing.."):
@@ -37,6 +37,8 @@ def main():
                     file_path = output_filename_for_flatten
 
                 summary = get_summerized_response(file_path)
+                if(len(summary) != 0):
+                    st.markdown(summary)
 
 
 

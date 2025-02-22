@@ -69,6 +69,7 @@ def get_summerized_response(document_location):
 
     # Invoke chain
     summary = chain.invoke({"context": anonymized_docs})
+    # summary = chain.invoke({"context": docs})
    
 
    
