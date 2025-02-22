@@ -132,7 +132,7 @@ Excel sheet updated successfully at medical_reports.xlsx
 
 ## **Screenshots**
 
-![CLI INTERDACE](assets\image.png)
+![CLI INTERFACE](assets/image.png)
 
 ![WEB INTERFACE](assets\I1.png)
 ![WEB INTERFACE](assets\I2.png)
