@@ -132,11 +132,15 @@ Excel sheet updated successfully at medical_reports.xlsx
 
 ## **Screenshots**
 
+### **CLI INTERFACE**
+
 ![CLI INTERFACE](assets/image.png)
 
-![WEB INTERFACE](assets\I1.png)
-![WEB INTERFACE](assets\I2.png)
-![WEB INTERFACE](assets\I3.png)
+### **WEB INTERFACE**
+
+![WEB INTERFACE](assets/I1.png)
+![WEB INTERFACE](assets/I2.png)
+![WEB INTERFACE](assets/I3.png)
 
 ---
 
